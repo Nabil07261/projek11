@@ -1,10 +1,14 @@
 <?php
-    //memanggil file pustaka fungsi
+    // Memanggil file koneksi database
     require "koneksi.php";
-    //memindahkan data kiriman dari form ke var biasa
-    $id=$_GET["kode"];
-    //membuat query hapus data
-    $sqlb="delete from mhs where id=$id";
-    mysqli_query($koneksi,$sqlb);
+    
+    // Ambil ID dari parameter URL
+    $id = $_GET["kode"];
+    
+    // Query untuk menghapus data
+    $sqlb = "DELETE FROM mhs WHERE id=$id";
+    mysqli_query($koneksi, $sqlb);
+    
+    // Redirect ke halaman tampil data
     header("location:tampilDataMhs.php");
-    ?>
+?>

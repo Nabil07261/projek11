@@ -1,0 +1,436 @@
+/* CSS Sederhana untuk Aplikasi Data Mahasiswa */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    padding: 0;
+    margin: 0;
+    line-height: 1.6;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+h1, h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+h2 {
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+/* Link Styles */
+a {
+    color: #4CAF50;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    display: inline-block;
+    margin: 5px 0;
+    transition: background-color 0.3s;
+}
+
+a:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+a:focus {
+    outline: 2px solid #4CAF50;
+    outline-offset: 2px;
+}
+
+/* Table Link Styles (for action buttons) */
+table a {
+    padding: 5px 10px;
+    margin: 0;
+    font-size: 13px;
+    background-color: #f0f0f0;
+}
+
+table a:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+table td:last-child a,
+table td:nth-last-child(2) a {
+    margin-right: 5px;
+}
+
+/* Table Wrapper */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: white;
+    border-radius: 4px;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    min-width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    table-layout: auto;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px;
+    text-align: left;
+    font-weight: bold;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* Form Container */
+.container.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+/* Form Styles */
+form {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="number"],
+input[type="password"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 5px;
+    margin-left: 10px;
+    width: auto;
+    cursor: pointer;
+}
+
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+    outline: 2px solid #4CAF50;
+    outline-offset: 2px;
+}
+
+.radio-group,
+.checkbox-group {
+    margin: 10px 0 15px 0;
+}
+
+.radio-group label,
+.checkbox-group label {
+    display: inline;
+    font-weight: normal;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: normal;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+input[type="submit"]:focus {
+    outline: 2px solid #4CAF50;
+    outline-offset: 2px;
+}
+
+input[type="submit"]:active {
+    transform: translateY(1px);
+}
+
+/* Container Styles */
+.container {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+body > .container {
+    padding: 20px;
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Message Styles */
+.success {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    border-left: 4px solid #dc3545;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+.btn:focus {
+    outline: 2px solid #4CAF50;
+    outline-offset: 2px;
+}
+
+/* Message Box Container */
+.message-box {
+    background-color: white;
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+.message-box .success,
+.message-box .error {
+    margin-bottom: 25px;
+    padding: 18px 20px;
+    font-size: 16px;
+    line-height: 1.5;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.message-box .success {
+    background-color: #d4edda;
+    color: #155724;
+    border-left: 5px solid #28a745;
+}
+
+.message-box .error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border-left: 5px solid #dc3545;
+}
+
+.message-box .btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 30px;
+    font-size: 15px;
+    font-weight: 500;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.message-box .btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 0;
+    }
+    
+    .container {
+        padding: 10px;
+    }
+    
+    .form-container {
+        min-height: auto;
+        padding: 15px;
+    }
+    
+    table {
+        font-size: 12px;
+    }
+    
+    th, td {
+        padding: 8px 4px;
+        white-space: nowrap;
+    }
+    
+    form {
+        padding: 15px;
+        max-width: 100%;
+    }
+    
+    .table-wrapper {
+        margin-top: 15px;
+    }
+    
+    .message-box {
+        padding: 20px 25px;
+        max-width: 90%;
+    }
+    
+    .message-box .success,
+    .message-box .error {
+        padding: 15px;
+        font-size: 14px;
+    }
+    
+    .message-box .btn {
+        padding: 10px 25px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1, h2 {
+        font-size: 1.5em;
+    }
+    
+    .container {
+        padding: 8px;
+    }
+    
+    .form-container {
+        padding: 10px;
+    }
+    
+    table {
+        font-size: 11px;
+    }
+    
+    th, td {
+        padding: 6px 2px;
+        white-space: nowrap;
+    }
+    
+    table a {
+        padding: 3px 6px;
+        font-size: 11px;
+        display: inline-block;
+        margin: 2px;
+    }
+    
+    .message-box {
+        padding: 15px 20px;
+        max-width: 95%;
+    }
+    
+    .message-box .success,
+    .message-box .error {
+        padding: 12px;
+        font-size: 13px;
+        margin-bottom: 20px;
+    }
+    
+    .message-box .btn {
+        padding: 10px 20px;
+        font-size: 13px;
+        width: 100%;
+        max-width: 200px;
+    }
+}
+
